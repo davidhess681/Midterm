@@ -32,5 +32,29 @@ namespace Midterm
             }
 
         }
+        //validates the user input as either y or n
+        public static bool YesOrNo(string response)
+        {
+
+            while (true)
+            {
+
+                if (response == "y")
+                {
+                    return true;
+                }
+                else if (response == "n")
+                {
+                    return false;
+                }
+                else
+                {
+                    Console.Write("Invalid input, try (y/n): ");
+                    response = Console.ReadLine().ToLower();//changes variable and loops to top
+
+                }
+            }
+
+        }
     }
 }
